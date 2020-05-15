@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name  |string|null: false, add_index: true|
+|name  |string|null: false, index: true|
 
 ### Association
 - has_many :messages
