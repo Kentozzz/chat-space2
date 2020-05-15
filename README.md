@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name  |text|null: false|
+|name  |string|null: false, add_index: true|
 
 ### Association
 - has_many :messages
@@ -26,7 +26,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name  |text|null: false|
+|name  |string|null: false|
 
 ### Association
 
@@ -39,6 +39,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |text  |text|       |
+|image |string|     |
 |user  |reference|foreign_key: true|
 |group |reference|foreign_key: true|
 
