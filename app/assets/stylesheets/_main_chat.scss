@@ -38,25 +38,23 @@
   padding: 35px 40px 0;
   background-color: #fafafa;
   height: calc(100vh - 190px);
-  &__message-box {
+  &__user-name {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-darkgray;
+    &__date {
+      font-size: 12px;
+      padding-left: 10px;
+      font-weight:normal;
+      color: $color-lightgray;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    margin-top: 12px;
     margin-bottom: 46px;
-    &__user-name {
-      font-size: 16px;
-      font-weight: bold;
-      color: $color-darkgray;
-      display: flex;
-      &__date {
-        color: $color-lightgray;
-        font-size: 12px;
-        padding-left: 10px;
-        font-weight:normal;
-      }
-    }
-    &__text {
-      color: $color-darkgray;
-      font-size: 14px;
-      margin-top: 12px;
-    }
+    color: $color-darkgray;
   }
 }
 .form {
