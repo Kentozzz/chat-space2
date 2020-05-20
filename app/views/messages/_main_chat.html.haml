@@ -8,7 +8,7 @@
         %li.header__group__member__group-user
           userA
     =link_to "#" do
-      .header__edit-btn Edit
+      .edit-btn Edit
   .messages
     .messages__message-box
       .messages__message-box__user-name
@@ -17,7 +17,7 @@
           2020年01月01日00時00分
       .messages__message-box__text
         test-text
-  %form.form
+  .form
     = form_with do |f|
       .input-box
         = f.text_field :content, class: 'input-box-content', placeholder: 'type a message'

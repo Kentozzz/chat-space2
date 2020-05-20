@@ -14,7 +14,7 @@
       margin-top: 35px;
     }
     &__member {
-      color: #999;
+      color: $color-lightgray;
       display: flex;
       font-size: 12px;
       margin-top: 15px;
@@ -24,7 +24,7 @@
       }
     }
   }
-  &__edit-btn {
+  .edit-btn {
     height: 40px;
     padding: 0 20px;
     margin-top: 28px;
@@ -37,7 +37,7 @@
   overflow: scroll;
   padding: 35px 40px 0;
   background-color: #fafafa;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 190px);
   &__message-box {
     margin-bottom: 46px;
     &__user-name {
@@ -46,7 +46,7 @@
       color: $color-darkgray;
       display: flex;
       &__date {
-        color: #999;
+        color: $color-lightgray;
         font-size: 12px;
         padding-left: 10px;
         font-weight:normal;
@@ -60,38 +60,40 @@
   }
 }
 .form {
-  display: flex;
   background-color: #dddddd;
   padding: 20px 50px 20px 40px;
-  .input-box {
-    width: 100%;
+  form{
     display: flex;
-    position: relative;
-    .input-box-content {
+    .input-box {
       width: 100%;
+      display: flex;
+      position: relative;
+      .input-box-content {
+        width: 100%;
+        border: none;
+        padding: 0 45px 0 15px;
+        background-color: $color-white;
+      }
+      .image {
+        right: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        line-height: 50px;
+        position: absolute;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    .submit-btn {
       border: none;
-      padding: 0 45px 0 15px;
-      background-color: $color-white;
-    }
-    .image {
-      right: 10px;
-      font-size: 25px;
       cursor: pointer;
+      font-size: 16px;
+      padding: 0 30px;
       line-height: 50px;
-      position: absolute;
+      margin-left: 15px;
+      color: $color-white;
+      background-color: $color-skyblue;
     }
-    .hidden {
-      display: none;
-    }
-  }
-  .submit-btn {
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 0 30px;
-    line-height: 50px;
-    margin-left: 15px;
-    color: $color-white;
-    background-color: $color-skyblue;
   }
 }
