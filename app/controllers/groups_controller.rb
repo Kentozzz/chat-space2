@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  def updata
+  def update
     @group = Group.find(params[:id])
     if @group.update(group_params)
       redirect_to root_path, notice: 'グループを更新しました'

@@ -9,9 +9,9 @@
         = icon('fas', 'cog')
   .sidegroup
     - current_user.groups.each do |group|
-      = link_to "#" do
+      = link_to group_messages_path(group) do
         %p.sidegroup__user-name
-          test-group
+          = group.name
       = link_to "#" do
         %p.sidegroup__content
-          まだメッセージはありません。
+          = group.show_last_message

@@ -1,22 +1,18 @@
 .mainchat
   .header
     .group
-      test-group
+      = @group.name
       %ul.group__member
         Member：
         %li.group__group-user
-          userA
-    =link_to "#" do
+        - @group.users.each do |users|
+          = users.name
+    =link_to edit_group_path(@group) do
       .edit-btn Edit
   .messages
-    .messages__user-name
-      userA
-      .messages__user-name__date
-        2020年01月01日00時00分
-    .messages__text
-      test-text
+    = render @messages
   .form
-    = form_with do |f|
+    = form_with model: [@group, @message], local: true do |f|
       = f.text_field :content, class: 'input-box-content', placeholder: 'type a message'
       = f.label :image, class: 'image' do
         = icon('fas', 'image')
