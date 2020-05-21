@@ -1,0 +1,14 @@
+.Notification {
+  .notice {
+    background-color: #38AEF0;
+    color: #fff;
+    text-align: center;
+  }
+// noticeの時は↑のスタイルを適用(notice通知という意味)
+// alertの時は↓のスタイルを適用
+  .alert {
+    background-color: #F35500;
+    color: #fff;
+    text-align: center;
+  }
+}
