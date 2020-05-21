@@ -1,0 +1,16 @@
+.sidebar
+  .sideheader
+    %p.sideheader__user-name
+      test-user
+    %ul.sideheader__icons
+      = link_to "#" do
+        = icon('fas', 'edit')
+      = link_to "#" do
+        = icon('fas', 'cog')
+  .sidegroup
+    = link_to "#" do
+      %p.sidegroup__user-name
+        test-group
+    = link_to "#" do
+      %p.sidegroup__content
+        まだメッセージはありません。

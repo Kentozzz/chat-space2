@@ -1,0 +1,31 @@
+.sidebar {
+  color: $color-white;
+}
+a {
+  color: $color-white;
+  text-decoration: none;
+}
+.sideheader {
+  padding: 0 20px;
+  align-items: center;
+  background-color: #253141;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.sidegroup {
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  &__user-name {
+    font-size: 15px;
+    padding-top: 20px;
+  }
+  &__content {
+    font-size: 11px;
+    margin-top: 5px;
+    padding: 0 0 20px;
+  }
+}
