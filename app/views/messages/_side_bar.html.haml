@@ -3,14 +3,15 @@
     %p.sideheader__user-name
       = current_user.name
     %ul.sideheader__icons
-      = link_to "#" do
+      = link_to new_group_path(current_user) do
         = icon('fas', 'edit')
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog')
   .sidegroup
-    = link_to "#" do
-      %p.sidegroup__user-name
-        test-group
-    = link_to "#" do
-      %p.sidegroup__content
-        まだメッセージはありません。
+    - current_user.groups.each do |group|
+      = link_to "#" do
+        %p.sidegroup__user-name
+          test-group
+      = link_to "#" do
+        %p.sidegroup__content
+          まだメッセージはありません。
