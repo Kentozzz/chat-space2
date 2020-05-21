@@ -7,12 +7,10 @@
   padding: 0 40px;
   justify-content: space-between;
   border-bottom: solid 1px #eee;
-  &__group {
-    &__group-name{
-      color: #333;
-      font-size: 20px;
-      margin-top: 35px;
-    }
+  .group {
+    color: #333;
+    font-size: 20px;
+    margin-top: 35px;
     &__member {
       color: $color-lightgray;
       display: flex;
@@ -62,36 +60,33 @@
   padding: 20px 50px 20px 40px;
   form{
     display: flex;
-    .input-box {
-      width: 100%;
+    position: relative;
+    .input-box-content {
       display: flex;
-      position: relative;
-      .input-box-content {
-        width: 100%;
-        border: none;
-        padding: 0 45px 0 15px;
-        background-color: $color-white;
-      }
-      .image {
-        right: 10px;
-        font-size: 25px;
-        cursor: pointer;
-        line-height: 50px;
-        position: absolute;
-      }
-      .hidden {
-        display: none;
-      }
-    }
-    .submit-btn {
+      width: 100%;
       border: none;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 0 30px;
-      line-height: 50px;
-      margin-left: 15px;
-      color: $color-white;
-      background-color: $color-skyblue;
+      padding: 0 45px 0 15px;
+      background-color: $color-white;
     }
+    .image {
+      right: 125px;
+      font-size: 25px;
+      cursor: pointer;
+      line-height: 50px;
+      position: absolute;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  .submit-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 30px;
+    line-height: 50px;
+    margin-left: 15px;
+    color: $color-white;
+    background-color: $color-skyblue;
   }
 }

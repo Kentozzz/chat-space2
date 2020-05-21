@@ -6,31 +6,26 @@ a {
   text-decoration: none;
 }
 .sideheader {
-  display: flex;
-  height: 100px;
   padding: 0 20px;
   align-items: center;
   background-color: #253141;
-  &__box {
-    height: 20px;
-    width: 260px;
-    display: flex;
-    justify-content: space-between;
-  }
+  height: 100px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
 .sidegroup {
   padding: 0 20px;
   box-sizing: border-box;
   background-color: #2f3e51;
   height: calc(100vh - 100px);
-  &__box {
-    padding: 20px 0 40px;
-    &__user-name {
-      font-size: 15px;
-    }
-    &__content {
-      font-size: 11px;
-      margin-top: 5px;
-    }
+  &__user-name {
+    font-size: 15px;
+    padding-top: 20px;
+  }
+  &__content {
+    font-size: 11px;
+    margin-top: 5px;
+    padding: 0 0 20px;
   }
 }

@@ -1,11 +1,10 @@
 .mainchat
   .header
-    .header__group
-      %p.header__group__group-name
-        test-group
-      %ul.header__group__member
+    .group
+      test-group
+      %ul.group__member
         Member：
-        %li.header__group__member__group-user
+        %li.group__member__group-user
           userA
     =link_to "#" do
       .edit-btn Edit
@@ -18,9 +17,8 @@
       test-text
   .form
     = form_with do |f|
-      .input-box
-        = f.text_field :content, class: 'input-box-content', placeholder: 'type a message'
-        = f.label :image, class: 'image' do
-          = icon('fas', 'image')
-          = f.file_field :image, class: 'hidden'
+      = f.text_field :content, class: 'input-box-content', placeholder: 'type a message'
+      = f.label :image, class: 'image' do
+        = icon('fas', 'image')
+        = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'submit-btn'
