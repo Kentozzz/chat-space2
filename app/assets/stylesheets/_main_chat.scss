@@ -3,10 +3,10 @@
 }
 .header {
   height: 100px;
-  display: flex;
   padding: 0 40px;
-  justify-content: space-between;
   border-bottom: solid 1px #eee;
+  display: flex;
+  justify-content: space-between;
   .group {
     color: #333;
     font-size: 20px;
@@ -16,10 +16,10 @@
       display: flex;
       font-size: 12px;
       margin-top: 15px;
-      &__group-user {
-        padding: 0px;
-        font-size: 13px;
-      }
+    }
+    &__group-user {
+      padding-right: 5px;
+      font-size: 13px;
     }
   }
   .edit-btn {
