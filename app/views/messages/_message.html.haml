@@ -4,5 +4,6 @@
     = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
 .messages__text
   - if message.content.present?
-    = message.content
+    .content
+      = message.content
   = image_tag message.image.url, class: 'image' if message.image.present?
