@@ -12,7 +12,7 @@
   .messages
     = render @messages
   .form
-    = form_with model: [@group, @message], local: true do |f|
+    = form_with model: [@group, @message], id:'new_message', local: true do |f|
       = f.text_field :content, class: 'input-box-content', placeholder: 'type a message'
       = f.label :image, class: 'image' do
         = icon('fas', 'image')
