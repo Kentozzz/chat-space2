@@ -2,20 +2,22 @@ $(function(){
   function buildHTML(message){
     var img = message.image ? `<img class="image" src="${message.image}">` : "" ;
       let html =
-        `<div class="messages__user-name">
+      `<div class="MessageBox" data-message-id=${message.id}>
+        <div class="messages__user-name">
             ${message.user_name}
           <div class="messages__user-name__date">
             ${message.created_at}
           </div>
-          </div>
-          <div class="messages__text">
+        </div>
+        <div class="messages__text">
+          <div class="content">
             ${message.content}
-            <div class="content">
+          </div>
           ${img}
-        </div>`
+        </div>
+      </div>`
       return html;
   }
-
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     let formData = new FormData(this);
@@ -42,4 +44,4 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     });
   })
-})
+});
