@@ -61,5 +61,5 @@ gem 'mini_magick'
 gem 'jquery-rails'
 
 group :production do
-  gem 'unicorn', '5.4.1'
+  gem 'unicorn', '5.5.5'
 end
