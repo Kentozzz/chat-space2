@@ -62,4 +62,4 @@ $(function() {
   $(".ChatMembers").on("click", ".ChatMember__remove", function() {
     $(this).parent().remove();
   });
-});
+}); 
