@@ -37,12 +37,12 @@ $(function(){
       $('form')[0].reset();
       $('.box').animate({'height' : '200px'});
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-    })
+    });
     .always(function(){
       $(".submit-btn").removeAttr("disabled");
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-    });
+    })
   })
 });
