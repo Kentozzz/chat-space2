@@ -33,6 +33,7 @@ $(function(){
     .done(function(data){
       let html = buildHTML(data);
       $('.messages').append(html);
+      console.log(html)
       $('form')[0].reset();
       $('.box').animate({'height' : '200px'});
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});

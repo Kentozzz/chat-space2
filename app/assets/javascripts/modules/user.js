@@ -1,4 +1,7 @@
 $(function() {
+  // 空の配列を定義する
+  var 
+
   function addUser(user) {
     let html = `
                 <div class="ChatMember">
@@ -27,6 +30,18 @@ $(function() {
                 </div>
                 `;
     $(".ChatMembers").append(html);
+  }
+
+  function addUserArray() {
+    // グループ編集画面の下（既にグループに追加されている）ユーザーの名前を取得する
+    // 改行コードが含まれるので、改行コードを省く
+  }
+
+  function removeUserArray() {
+    // ユーザーの「削除」のボタンを押したときに、再度取得しなおす。
+    // 新しい空の配列を定義する。
+    // グループ編集画面の下（既にグループに追加されている）ユーザーの名前を取得する
+    // 改行コードが含まれるので、改行コードを省く
   }
 
   $("#UserSearch__field").on("keyup", function() {
