@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    # set_groupの@groupに入っているgroupのmessagesテーブルを出し、user情報も一緒に代入
   end
 
   def create
@@ -27,5 +28,6 @@ class MessagesController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+# groupsテーブルの該当レコード1行を@groupに代入
   end
 end

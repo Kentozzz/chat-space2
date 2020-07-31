@@ -1,12 +1,12 @@
 .mainchat
   .header
     .group
-      = @group.name
+      = @group.name #@groupのnameカラムを表示する
       %ul.group__member
         Member：
         %li.group__group-user
-        - @group.users.each do |users|
-          = users.name
+        - @group.users.each do |u| 
+          = u.name #8行目@groupに入っているusersテーブルを一覧表示しnameカラムを表示
     =link_to edit_group_path(@group) do
       .edit-btn Edit
   .messages
