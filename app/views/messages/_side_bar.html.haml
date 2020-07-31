@@ -1,16 +1,18 @@
 .sidebar
   .sideheader
     %p.sideheader__user-name
-      = current_user.name
+      = current_user.name #deviceでcurrent_userを使えるようにしている&nameカラムの表示
     %ul.sideheader__icons
       = link_to new_group_path(current_user) do
         = icon('fas', 'edit')
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog')
   .sidegroup
-    - current_user.groups.each do |group|
-      = link_to group_messages_path(group) do
+    - current_user.groups.each do |g| #current_userが入っている配列groupを一覧表示(groupsテーブル)
+      = link_to group_messages_path(g) do
         %p.sidegroup__user-name
-          = group.name
+          = g.name #eachで使ったブロック変数の中にあるgroupのnameカラムを表示
         %p.sidegroup__content
-          = group.show_last_message
+          = g.show_last_message 
+          -# モデルのgroup.rbにshow_last_messageを定義している
+                      -# 引数を渡すならprefixで記述が必要

@@ -5,14 +5,14 @@ class Group < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   def show_last_message
-    if (last_message = messages.last).present?
-      if last_message.content?
-        last_message.content
+    if (last_message = messages.last).present? #オブジェクトに値が入っているかどうかを判定し、trueならlast_messageに最後のmessageを代入
+      if last_message.content? #contentカラムに値が入っているか
+        last_message.content #last_messageのcontentカラムを出力
       else
-        '画像が投稿されています'
+        '画像が投稿されています' #画像だけの場合はオブジェクトに何も入らないのでelseに行く
       end
     else
-      'まだメッセージはありません。'
+      'まだメッセージはありません。'  #空の場合はコチラ
     end
   end
 
