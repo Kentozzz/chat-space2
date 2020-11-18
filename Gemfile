@@ -67,3 +67,7 @@ gem 'jquery-rails'
 group :production do
   gem 'unicorn', '5.5.5'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
